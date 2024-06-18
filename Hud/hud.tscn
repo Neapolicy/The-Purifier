@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce31q3b3j8nnl"]
+
+[ext_resource type="Texture2D" uid="uid://21ek6aeuwyvr" path="res://Textures/Health Bar/under.png" id="1_gdgci"]
+[ext_resource type="Texture2D" uid="uid://c0ulcfy7rbfpf" path="res://Textures/Health Bar/over.png" id="2_vjavr"]
+[ext_resource type="Script" path="res://Hud/StaminaBar.gd" id="3_30fer"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Stamina Bar" type="TextureProgressBar" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -43.0
+offset_right = 579.0
+grow_horizontal = 2
+grow_vertical = 0
+nine_patch_stretch = true
+texture_under = ExtResource("1_gdgci")
+texture_progress = ExtResource("2_vjavr")
+script = ExtResource("3_30fer")
