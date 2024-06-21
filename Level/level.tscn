@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://bmcesleyq1dih"]
+[gd_scene load_steps=15 format=3 uid="uid://bmcesleyq1dih"]
 
-[ext_resource type="Texture2D" uid="uid://dwc1jicqx5y4i" path="res://Textures/floor.jpg" id="1_whlqu"]
+[ext_resource type="PackedScene" uid="uid://ci40lhhnkbd3v" path="res://Ghost/ghost.tscn" id="1_0vs7k"]
+[ext_resource type="Texture2D" uid="uid://dwc1jicqx5y4i" path="res://Textures/Objects/floor.jpg" id="2_dlmpe"]
 [ext_resource type="PackedScene" uid="uid://b6oj4hgc6wmy" path="res://Player/Playa.tscn" id="3_p6veo"]
+[ext_resource type="Texture2D" uid="uid://vq6rww0o3bkk" path="res://Textures/Objects/Stone.jpg" id="3_rqx8q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7ya11"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,11 +19,13 @@ tonemap_mode = 2
 glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
-albedo_texture = ExtResource("1_whlqu")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_etkav"]
 material = SubResource("StandardMaterial3D_c3ku0")
 size = Vector2(20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8iaxm"]
+albedo_texture = ExtResource("2_dlmpe")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bocxo"]
 data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
@@ -29,14 +33,14 @@ data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0,
 [sub_resource type="BoxMesh" id="BoxMesh_82txm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dfud2"]
-albedo_texture = ExtResource("1_whlqu")
+albedo_texture = ExtResource("3_rqx8q")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kvid2"]
 
 [node name="Level" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("3_p6veo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1.54363)
+[node name="Ghost" parent="." instance=ExtResource("1_0vs7k")]
+transform = Transform3D(0.999732, -0.0231585, 0, 0.0231585, 0.999732, 0, 0, 0, 1, 2.35274, 2.47626, -7.6497)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w8m4q")
@@ -47,6 +51,7 @@ shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_etkav")
+surface_material_override/0 = SubResource("StandardMaterial3D_8iaxm")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
@@ -62,3 +67,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_dfud2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_kvid2")
+
+[node name="Player" parent="." instance=ExtResource("3_p6veo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
