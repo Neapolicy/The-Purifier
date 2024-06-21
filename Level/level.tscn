@@ -69,4 +69,4 @@ surface_material_override/0 = SubResource("StandardMaterial3D_dfud2")
 shape = SubResource("BoxShape3D_kvid2")
 
 [node name="Player" parent="." instance=ExtResource("3_p6veo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.972269, 0)
