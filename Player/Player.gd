@@ -62,7 +62,7 @@ func _check_sprinting(time : float, direction : Vector3):
 	if (Input.is_action_pressed("sprint") && !exhausted && !velocity.is_zero_approx()):
 		if (stamina_bar.current_stamina > 0):
 			stamina_bar.sprinting = true
-			stamina_bar.consume_stamina(20 * time)
+			stamina_bar.consume_stamina(40 * time)
 			velocity.x *= SPRINT_VELOCITY 
 			velocity.z *= SPRINT_VELOCITY 
 		else:
