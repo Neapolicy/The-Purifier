@@ -53,7 +53,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 2.0)
 		velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 2.0)
-	
+		if (Input.is_action_pressed("sprint") && !exhausted && stamina_bar.current_stamina > 0): #i literally have no clue how to fix this :sob:
+			stamina_bar.consume_stamina(40 * delta)
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
 	move_and_slide()
@@ -61,10 +62,10 @@ func _physics_process(delta):
 func _check_sprinting(time : float, direction : Vector3):
 	if (Input.is_action_pressed("sprint") && !exhausted && !velocity.is_zero_approx()):
 		if (stamina_bar.current_stamina > 0):
-			stamina_bar.sprinting = true
+			stamina_bar.sprinting = true #prevents stamina regen mid sprint
 			stamina_bar.consume_stamina(40 * time)
-			velocity.x *= SPRINT_VELOCITY 
-			velocity.z *= SPRINT_VELOCITY 
+			velocity.x *= SPRINT_VELOCITY
+			velocity.z *= SPRINT_VELOCITY
 		else:
 			exhausted = true #prevents player from being able to hold down shift forever
 	else:
