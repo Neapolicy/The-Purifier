@@ -7,8 +7,20 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fcjaq"]
 
-[sub_resource type="Animation" id="Animation_lg0wj"]
-resource_name = "RESET"
+[sub_resource type="Animation" id="Animation_e8ere"]
+resource_name = "Close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mwfv8"]
 resource_name = "Open"
@@ -25,20 +37,8 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_e8ere"]
-resource_name = "Close"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.9),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
-}
+[sub_resource type="Animation" id="Animation_lg0wj"]
+resource_name = "RESET"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tnver"]
 _data = {
@@ -63,7 +63,7 @@ mesh = SubResource("BoxMesh_rirb4")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1.89311, 0, 0, 0, 0.4, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1.89311, 0, 0, 0, 0.4, 0.00255787, -0.00254932, -0.000240326)
 shape = SubResource("BoxShape3D_fcjaq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge/StaticBody3D"]
