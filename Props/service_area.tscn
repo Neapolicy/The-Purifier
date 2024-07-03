@@ -1,16 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://cphe2jl8ooat6"]
+[gd_scene load_steps=8 format=3 uid="uid://cphe2jl8ooat6"]
 
 [ext_resource type="PackedScene" uid="uid://bbprn3oipuyj0" path="res://Rooms/Walls/Service Area.glb" id="1_uefce"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v81n6"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_haqk7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctk5p"]
+transparency = 1
+albedo_color = Color(0.137255, 0.878431, 0.952941, 0.403922)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sk3e2"]
+transparency = 1
+albedo_color = Color(0.137255, 0.878431, 0.952941, 0.403922)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xii4t"]
+transparency = 1
+albedo_color = Color(0.137255, 0.878431, 0.952941, 0.403922)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qrafd"]
+transparency = 1
+albedo_color = Color(0.137255, 0.878431, 0.952941, 0.403922)
+
 [node name="Service Area" instance=ExtResource("1_uefce")]
 
 [node name="Cube" parent="." index="0"]
-transform = Transform3D(-0.0048369, -0.015636, -0.00206947, -2.04816e-05, 3.69232, -0.0036247, -1.95217e-06, 0.00258462, 5.16561, 0, 0, 0)
+transform = Transform3D(0.00138559, -0.0155508, -0.0020684, 5.86719e-06, 3.6722, -0.00362283, 5.59222e-07, 0.00257054, 5.16295, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
 transform = Transform3D(0.995404, -3.39022e-06, -1.19209e-07, -4.50751e-14, 2.00125, 1.39698e-09, 0, 1.16415e-10, 1.89867, -0.083, -3.63798e-12, 0.05)
 shape = SubResource("BoxShape3D_v81n6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(0.0254769, 0, 0, 0, 0.881604, 0, 0, 0, 1.16176, -0.00344312, -1.44199, -0.765709)
+mesh = SubResource("BoxMesh_haqk7")
+surface_material_override/0 = SubResource("StandardMaterial3D_ctk5p")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(0.0191406, 0, 0, 0, 0.881604, 0, 0, 0, 1.23191, -0.00344312, -1.44199, -2.98473)
+mesh = SubResource("BoxMesh_haqk7")
+surface_material_override/0 = SubResource("StandardMaterial3D_sk3e2")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(0.0254769, 0, 0, 0, 0.881604, 0, 0, 0, 1.2613, -0.00344312, -1.44199, 1.54141)
+mesh = SubResource("BoxMesh_haqk7")
+surface_material_override/0 = SubResource("StandardMaterial3D_xii4t")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." index="4"]
+transform = Transform3D(0.0254769, 0, 0, 0, 0.881604, 0, 0, 0, 1.2613, -0.00344312, -1.44199, 3.94884)
+mesh = SubResource("BoxMesh_haqk7")
+surface_material_override/0 = SubResource("StandardMaterial3D_qrafd")

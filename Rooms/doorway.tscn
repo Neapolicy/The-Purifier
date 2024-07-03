@@ -3,26 +3,26 @@
 [ext_resource type="PackedScene" uid="uid://ib5pixk7xbr1" path="res://Rooms/Doorway.glb" id="1_us1yo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_psucg"]
-size = Vector3(1, 1, 1.38721)
+size = Vector3(1, 1, 1.40112)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1y1r"]
-size = Vector3(1, 1, 1.38721)
+size = Vector3(0.948242, 1, 1.38721)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uq6l1"]
-size = Vector3(1, 0.733887, 1.38721)
+size = Vector3(0.932617, 0.733887, 1.38721)
 
 [node name="Doorway" instance=ExtResource("1_us1yo")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 1.10844, 0, 0, -0.220281)
+transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 1.10844, 0, 0, -0.227993)
 shape = SubResource("BoxShape3D_psucg")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.110881, 0, 0, 0.922989)
+transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.110881, 0.0258789, 0, 0.922989)
 shape = SubResource("BoxShape3D_b1y1r")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Cube/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.214527, 0, 0.265465, 0.700824)
+transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.214527, 0.0336914, 0.265465, 0.700824)
 shape = SubResource("BoxShape3D_uq6l1")

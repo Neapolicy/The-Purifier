@@ -1,11 +1,12 @@
-[gd_scene load_steps=24 format=3 uid="uid://c8hvvwlws0lva"]
+[gd_scene load_steps=25 format=3 uid="uid://c8hvvwlws0lva"]
 
 [ext_resource type="Texture2D" uid="uid://cgxcy30sh01dw" path="res://Textures/Objects/lobby_wall.jpg" id="1_2pej8"]
 [ext_resource type="Texture2D" uid="uid://cyar3jkqtf8ap" path="res://Textures/Objects/lobby floor.jpg" id="1_ju5a0"]
 [ext_resource type="PackedScene" uid="uid://rpbslfy4bww2" path="res://Rooms/Doors/door.tscn" id="3_2rdcg"]
-[ext_resource type="PackedScene" uid="uid://d11btbirvaiir" path="res://Furniture (Reimported/Desk.tscn" id="4_mhm8i"]
 [ext_resource type="PackedScene" uid="uid://bxc46xecwr604" path="res://Rooms/doorway.tscn" id="5_arikt"]
+[ext_resource type="PackedScene" uid="uid://d13gsnt7ipffg" path="res://Furniture (Reimported/desk.tscn" id="6_2qe34"]
 [ext_resource type="PackedScene" uid="uid://cphe2jl8ooat6" path="res://Props/service_area.tscn" id="6_7altp"]
+[ext_resource type="PackedScene" uid="uid://qoq58y2veqbj" path="res://Furniture (Reimported/chair.tscn" id="7_h65ml"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
 cull_mode = 2
@@ -108,9 +109,6 @@ shape = SubResource("ConcavePolygonShape3D_6wlqb")
 [node name="Door" parent="." instance=ExtResource("3_2rdcg")]
 transform = Transform3D(0.0124264, 0, -0.999923, 0, 1, 0, 0.999923, 0, 0.0124264, -9.48317, 0.987357, 10.3539)
 
-[node name="Desk" parent="." instance=ExtResource("4_mhm8i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10459, 0.498319, 2.90967)
-
 [node name="Door2" parent="." instance=ExtResource("3_2rdcg")]
 transform = Transform3D(-0.99959, 0, 0.0286195, 0, 1, 0, -0.0286195, 0, -0.99959, -0.654187, 0.987357, 8.00736)
 
@@ -138,7 +136,29 @@ mesh = SubResource("BoxMesh_fduc1")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.385488, -1.42109e-14, 0, -8.88178e-16, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_kgdh7")
 
 [node name="Service Area" parent="." instance=ExtResource("6_7altp")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.32057, 3, 2.01507)
+
+[node name="Desk" parent="." instance=ExtResource("6_2qe34")]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, -6.49069, -1.58306, 5.45299)
+
+[node name="Desk" parent="Desk" instance=ExtResource("6_2qe34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8147e-06, 0, -9.19881)
+
+[node name="chair" parent="." instance=ExtResource("7_h65ml")]
+transform = Transform3D(-4.37114e-08, 0, 4.27551, 0, 1, 0, -1, 0, -1.86889e-07, -4.02638, 1.01847, -7.02984)
+
+[node name="chair2" parent="." instance=ExtResource("7_h65ml")]
+transform = Transform3D(-4.37114e-08, 0, 4.27551, 0, 1, 0, -1, 0, -1.86889e-07, -4.02638, 1.01847, -3.51222)
+
+[node name="chair3" parent="." instance=ExtResource("7_h65ml")]
+transform = Transform3D(-4.37114e-08, 0, 4.27551, 0, 1, 0, -1, 0, -1.86889e-07, 5.1377, 1.01847, -3.51222)
+
+[node name="chair4" parent="." instance=ExtResource("7_h65ml")]
+transform = Transform3D(-4.37114e-08, 0, 4.27551, 0, 1, 0, -1, 0, -1.86889e-07, 5.1377, 1.01847, -7.05616)
+
+[node name="chair5" parent="." instance=ExtResource("7_h65ml")]
+transform = Transform3D(0.999847, 0, -0.074618, 0, 1, 0, 0.0174524, 0, 4.27486, 9.2102, 1.01847, 4.01313)

@@ -3,18 +3,18 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cgl0nmenlq8y2"
-path="res://.godot/imported/Desk.gltf-2e6be74b7744cad04e3e8bf28dd9c2a9.scn"
+uid="uid://1rsu1445k3um"
+path="res://.godot/imported/Desk.glb-c84409c74111310cc62e713cae4c0dd1.scn"
 
 [deps]
 
-source_file="res://Props/metal_desk/Desk.gltf"
-dest_files=["res://.godot/imported/Desk.gltf-2e6be74b7744cad04e3e8bf28dd9c2a9.scn"]
+source_file="res://Props/Desk.glb"
+dest_files=["res://.godot/imported/Desk.glb-c84409c74111310cc62e713cae4c0dd1.scn"]
 
 [params]
 
 nodes/root_type="Node3D"
-nodes/root_name="Scene Root"
+nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 meshes/ensure_tangents=true
