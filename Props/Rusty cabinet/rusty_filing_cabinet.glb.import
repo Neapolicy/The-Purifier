@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cqee0pmq8u0o4"
-path="res://.godot/imported/rusty_filing_cabinet.glb-0aebd700e75c97d3b887991743848779.scn"
+path="res://.godot/imported/rusty_filing_cabinet.glb-07f63130f9743e12c34ceae5666e26f1.scn"
 
 [deps]
 
-source_file="res://Props/rusty_filing_cabinet.glb"
-dest_files=["res://.godot/imported/rusty_filing_cabinet.glb-0aebd700e75c97d3b887991743848779.scn"]
+source_file="res://Props/Rusty cabinet/rusty_filing_cabinet.glb"
+dest_files=["res://.godot/imported/rusty_filing_cabinet.glb-07f63130f9743e12c34ceae5666e26f1.scn"]
 
 [params]
 

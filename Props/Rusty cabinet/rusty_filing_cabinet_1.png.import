@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tlxi7553rnva"
-path.s3tc="res://.godot/imported/rusty_filing_cabinet_1.png-09b675bee281d72421d054cb2ae298d3.s3tc.ctex"
+path.s3tc="res://.godot/imported/rusty_filing_cabinet_1.png-03317f019870ebec097e17230d7e8c3e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Props/rusty_filing_cabinet_1.png"
-dest_files=["res://.godot/imported/rusty_filing_cabinet_1.png-09b675bee281d72421d054cb2ae298d3.s3tc.ctex"]
+source_file="res://Props/Rusty cabinet/rusty_filing_cabinet_1.png"
+dest_files=["res://.godot/imported/rusty_filing_cabinet_1.png-03317f019870ebec097e17230d7e8c3e.s3tc.ctex"]
 
 [params]
 

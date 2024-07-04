@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dplnfkoq6p6es"
-path.s3tc="res://.godot/imported/rusty_filing_cabinet_2.png-2ade40eb3a63aba9eb5389f3c81e9e6e.s3tc.ctex"
+uid="uid://crma3sqm2qbvv"
+path.s3tc="res://.godot/imported/rusty_filing_cabinet_4.png-fa6bbb27eafb1cf7e2c5d21d52ebe03a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Props/rusty_filing_cabinet_2.png"
-dest_files=["res://.godot/imported/rusty_filing_cabinet_2.png-2ade40eb3a63aba9eb5389f3c81e9e6e.s3tc.ctex"]
+source_file="res://Props/Rusty cabinet/rusty_filing_cabinet_4.png"
+dest_files=["res://.godot/imported/rusty_filing_cabinet_4.png-fa6bbb27eafb1cf7e2c5d21d52ebe03a.s3tc.ctex"]
 
 [params]
 
@@ -21,12 +21,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Props/rusty_filing_cabinet_2.png"
+roughness/mode=8
+roughness/src_normal="res://Props/rusty_filing_cabinet_5.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
