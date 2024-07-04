@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c8hvvwlws0lva"]
+[gd_scene load_steps=29 format=3 uid="uid://c8hvvwlws0lva"]
 
 [ext_resource type="Texture2D" uid="uid://cgxcy30sh01dw" path="res://Textures/Objects/lobby_wall.jpg" id="1_2pej8"]
 [ext_resource type="Texture2D" uid="uid://cyar3jkqtf8ap" path="res://Textures/Objects/lobby floor.jpg" id="1_ju5a0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://qoq58y2veqbj" path="res://Furniture (Reimported/chair.tscn" id="7_h65ml"]
 [ext_resource type="PackedScene" uid="uid://bxdp8doikf8ki" path="res://Furniture (Reimported/monitor.tscn" id="8_6bjg8"]
 [ext_resource type="PackedScene" uid="uid://brx3v2bnyctfb" path="res://Furniture (Reimported/filing_cabinet.tscn" id="8_vnwcj"]
+[ext_resource type="PackedScene" uid="uid://cgoxpaeh8tdyi" path="res://Furniture (Reimported/office_chair.tscn" id="9_7rhu7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
 cull_mode = 2
@@ -190,6 +191,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -9.62356, 0.711916, 2.26043)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.540502, 0.711916, 2.26043)
 
 [node name="Office Chairs" type="Node3D" parent="."]
+
+[node name="Office Chair" parent="Office Chairs" instance=ExtResource("9_7rhu7")]
+transform = Transform3D(-0.00645077, 0, 0.00271801, 0, 0.007, 0, -0.00271801, 0, -0.00645077, -3.48661, 0.188717, 3.63637)
+
+[node name="Office Chair2" parent="Office Chairs" instance=ExtResource("9_7rhu7")]
+transform = Transform3D(-0.00407486, -0.00569171, 8.72831e-11, -0.000811802, 0.000581193, 0.00692843, -0.00563351, 0.0040332, -0.000998403, -1.75754, 0.468457, 3.63637)
+
+[node name="Office Chair3" parent="Office Chairs" instance=ExtResource("9_7rhu7")]
+transform = Transform3D(-0.00645077, 0, 0.00271801, 0, 0.007, 0, -0.00271801, 0, -0.00645077, -8.2768, 0.188717, 3.63637)
+
+[node name="Office Chair4" parent="Office Chairs" instance=ExtResource("9_7rhu7")]
+transform = Transform3D(-0.00645304, 0, -0.00271261, 0, 0.007, 0, 0.00271261, 0, -0.00645304, -6.55565, 0.188717, 3.63637)
 
 [node name="Monitors" type="Node3D" parent="."]
 

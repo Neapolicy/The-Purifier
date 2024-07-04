@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dbhupqi57agh1"]
+[gd_scene load_steps=27 format=3 uid="uid://dbhupqi57agh1"]
 
 [ext_resource type="Texture2D" uid="uid://cyar3jkqtf8ap" path="res://Textures/Objects/lobby floor.jpg" id="1_aocaj"]
 [ext_resource type="PackedScene" uid="uid://rpbslfy4bww2" path="res://Rooms/Doors/door.tscn" id="2_brq2o"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bxc46xecwr604" path="res://Rooms/doorway.tscn" id="4_0sg4p"]
 [ext_resource type="PackedScene" uid="uid://bxdp8doikf8ki" path="res://Furniture (Reimported/monitor.tscn" id="6_jfsox"]
 [ext_resource type="PackedScene" uid="uid://d13gsnt7ipffg" path="res://Furniture (Reimported/desk.tscn" id="6_xwnmw"]
+[ext_resource type="PackedScene" uid="uid://cgoxpaeh8tdyi" path="res://Furniture (Reimported/office_chair.tscn" id="7_aaet2"]
+[ext_resource type="PackedScene" uid="uid://d4edb6wd62eke" path="res://Furniture (Reimported/octo_cabinet.tscn" id="8_fwvoa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
 cull_mode = 2
@@ -166,3 +168,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5g3v7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Wall2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_eldck")
+
+[node name="Office Chairs" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87157, -0.181158, -11.7945)
+
+[node name="Office Chair2" parent="Office Chairs" instance=ExtResource("7_aaet2")]
+transform = Transform3D(-0.00407486, -0.00569171, 8.72831e-11, -0.000811802, 0.000581193, 0.00692843, -0.00563351, 0.0040332, -0.000998403, -4.11256, 0.468457, 3.63637)
+
+[node name="Office Chair4" parent="Office Chairs" instance=ExtResource("7_aaet2")]
+transform = Transform3D(-0.00645304, 0, -0.00271261, 0, 0.007, 0, 0.00271261, 0, -0.00645304, -6.55565, 0.188717, 3.63637)
+
+[node name="Cabinets" parent="." instance=ExtResource("8_fwvoa")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -14.2391, -0.105066, -1.63205)
+
+[node name="Cabinets" parent="Cabinets" instance=ExtResource("8_fwvoa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2588, -0.0235813, -0.0576136)
