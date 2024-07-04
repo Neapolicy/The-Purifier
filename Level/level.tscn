@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmcesleyq1dih"]
+[gd_scene load_steps=10 format=3 uid="uid://bmcesleyq1dih"]
 
 [ext_resource type="PackedScene" uid="uid://ci40lhhnkbd3v" path="res://Ghost/ghost.tscn" id="1_0vs7k"]
 [ext_resource type="PackedScene" uid="uid://b6oj4hgc6wmy" path="res://Player/Playa.tscn" id="3_p6veo"]
 [ext_resource type="PackedScene" uid="uid://c8hvvwlws0lva" path="res://Rooms/lobby.tscn" id="4_reocy"]
+[ext_resource type="PackedScene" uid="uid://c50a1tcc8dax4" path="res://Rooms/main_yard.tscn" id="4_uf6wy"]
+[ext_resource type="PackedScene" uid="uid://dbhupqi57agh1" path="res://Rooms/guards_room.tscn" id="5_0801d"]
+[ext_resource type="PackedScene" uid="uid://gt4bttrf3vb6" path="res://Rooms/Fence.tscn" id="6_ve3lr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7ya11"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -33,3 +36,18 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567832, 1.16736, -7.16557)
 
 [node name="Lobby" parent="." instance=ExtResource("4_reocy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12, 0)
+
+[node name="Main yard" parent="." instance=ExtResource("4_uf6wy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.103129, 40.5951)
+
+[node name="Guards Room" parent="." instance=ExtResource("5_0801d")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -38.1197, -0.0930481, 31.3471)
+
+[node name="Fences" type="Node3D" parent="."]
+
+[node name="Fencing" parent="Fences" instance=ExtResource("6_ve3lr")]
+transform = Transform3D(5.66266e-07, 0, 8.91836, 0, 2.86935, 0, -5.97733, 0, 3.10983e-06, -19.1213, 2.7987, 9.95999)
+
+[node name="Fencing2" parent="Fences" instance=ExtResource("6_ve3lr")]
+transform = Transform3D(-1, 0, 5.22554e-07, 0, 2.86935, 0, -8.74228e-08, 0, -5.97732, -28.1934, 2.85048, 15.9976)

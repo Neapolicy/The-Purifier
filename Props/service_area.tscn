@@ -1,6 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cphe2jl8ooat6"]
+[gd_scene load_steps=9 format=3 uid="uid://cphe2jl8ooat6"]
 
 [ext_resource type="PackedScene" uid="uid://bbprn3oipuyj0" path="res://Rooms/Walls/Service Area.glb" id="1_uefce"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2460l"]
+albedo_color = Color(0.556863, 0.556863, 0.556863, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v81n6"]
 
@@ -26,6 +29,7 @@ albedo_color = Color(0.137255, 0.878431, 0.952941, 0.403922)
 
 [node name="Cube" parent="." index="0"]
 transform = Transform3D(0.00138559, -0.0155508, -0.0020684, 5.86719e-06, 3.6722, -0.00362283, 5.59222e-07, 0.00257054, 5.16295, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_2460l")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 

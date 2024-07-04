@@ -1,28 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxc46xecwr604"]
+[gd_scene load_steps=6 format=3 uid="uid://bxc46xecwr604"]
 
 [ext_resource type="PackedScene" uid="uid://ib5pixk7xbr1" path="res://Rooms/Doorway.glb" id="1_us1yo"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vui0"]
+cull_mode = 2
+albedo_color = Color(0.556863, 0.556863, 0.556863, 1)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_psucg"]
-size = Vector3(1, 1, 1.40112)
+size = Vector3(1, 1, 1.45837)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b1y1r"]
-size = Vector3(0.948242, 1, 1.38721)
+size = Vector3(0.948242, 1, 1.44101)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uq6l1"]
-size = Vector3(0.932617, 0.733887, 1.38721)
+size = Vector3(0.932617, 0.730286, 1.38721)
 
 [node name="Doorway" instance=ExtResource("1_us1yo")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_5vui0")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 1.10844, 0, 0, -0.227993)
+transform = Transform3D(0.885544, 0, 0, 0, 1.99513, 0, 0, 0, 1.10844, 0, 0, -0.247814)
 shape = SubResource("BoxShape3D_psucg")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube/StaticBody3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.110881, 0.0258789, 0, 0.922989)
+transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.110881, 0.0258789, 0, 0.933087)
 shape = SubResource("BoxShape3D_b1y1r")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Cube/StaticBody3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.214527, 0.0336914, 0.265465, 0.700824)
+transform = Transform3D(1, 0, 0, 0, 1.99513, 0, 0, 0, 0.214527, 0.117862, 0.262367, 0.70409)
 shape = SubResource("BoxShape3D_uq6l1")

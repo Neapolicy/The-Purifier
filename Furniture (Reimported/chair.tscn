@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://qoq58y2veqbj"]
+[gd_scene load_steps=5 format=3 uid="uid://qoq58y2veqbj"]
 
 [ext_resource type="PackedScene" uid="uid://0juyigsvi1oc" path="res://Props/chair.glb" id="1_aovta"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_222aq"]
+cull_mode = 2
+albedo_color = Color(0.956863, 0.290196, 0.290196, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_57qcv"]
 size = Vector3(1.01318, 0.838989, 1)
@@ -8,6 +12,9 @@ size = Vector3(1.01318, 0.838989, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_pf7w5"]
 
 [node name="chair" instance=ExtResource("1_aovta")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_222aq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
