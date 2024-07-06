@@ -12,6 +12,7 @@ const BOB_AMP = 0.08
 var  t_bob = 0.0
 @onready var neck = $Neck
 @onready var camera = $Neck/Camera3D
+@onready var raycast = $Neck/Camera3D/RayCast3D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var stamina_bar = Hud.get_child(0)

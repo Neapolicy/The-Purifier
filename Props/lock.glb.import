@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/lock.glb-8fbfdd87d85d9febf14af69fd7fb1d8e.scn
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="Node3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0

@@ -1,10 +1,10 @@
-extends StaticBody3D
+extends Node3D
 
 var toggle = false
 var interactable = true
 @export var anim_player : AnimationPlayer
 # Called when the node enters the scene tree for the first time.
-func interact():
+func interact(player):
 	if (interactable):
 		interactable = false #prevents player from spam opening while door is playing the anim
 		toggle = !toggle

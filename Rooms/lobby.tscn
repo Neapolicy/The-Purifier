@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c8hvvwlws0lva"]
+[gd_scene load_steps=31 format=3 uid="uid://c8hvvwlws0lva"]
 
 [ext_resource type="Texture2D" uid="uid://cgxcy30sh01dw" path="res://Textures/Objects/lobby_wall.jpg" id="1_2pej8"]
 [ext_resource type="Texture2D" uid="uid://cyar3jkqtf8ap" path="res://Textures/Objects/lobby floor.jpg" id="1_ju5a0"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bxdp8doikf8ki" path="res://Furniture (Reimported/monitor.tscn" id="8_6bjg8"]
 [ext_resource type="PackedScene" uid="uid://brx3v2bnyctfb" path="res://Furniture (Reimported/filing_cabinet.tscn" id="8_vnwcj"]
 [ext_resource type="PackedScene" uid="uid://cgoxpaeh8tdyi" path="res://Furniture (Reimported/office_chair.tscn" id="9_7rhu7"]
+[ext_resource type="PackedScene" uid="uid://mnlbvogtjh3u" path="res://Rooms/Doors/locked_door.tscn" id="11_8w85q"]
+[ext_resource type="PackedScene" uid="uid://dke2ylymrvhw7" path="res://Furniture (Reimported/key.tscn" id="12_y0gko"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
 cull_mode = 2
@@ -79,9 +81,6 @@ data = PackedVector3Array(-10, 0.15, 2.5, 10, 0.15, 2.5, -10, -0.15, 2.5, 10, 0.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135315, 0)
 mesh = SubResource("PlaneMesh_imruw")
 surface_material_override/0 = SubResource("StandardMaterial3D_ihgyr")
-
-[node name="Door" parent="." instance=ExtResource("3_2rdcg")]
-transform = Transform3D(0.0124105, 0, -1.10471, 0, 1, 0, 0.998643, 0, 0.0137286, -9.57766, 1.06797, 10.3539)
 
 [node name="Door2" parent="." instance=ExtResource("3_2rdcg")]
 transform = Transform3D(-1.00152, 0, 0.0305536, 0, 1, 0, -0.0286749, 0, -1.06714, -0.654187, 1.06825, 7.97402)
@@ -217,3 +216,20 @@ transform = Transform3D(-0.638257, 0, -0.769823, 0, 1, 0, 0.769823, 0, -0.638257
 
 [node name="Laptop4" parent="Monitors" instance=ExtResource("8_6bjg8")]
 transform = Transform3D(-0.0457672, 0.862754, 0.503549, -0.997448, -0.0118156, -0.0704131, -0.0547995, -0.505487, 0.861092, -7.98732, 1.193, 2.62779)
+
+[node name="Locked Door" parent="." instance=ExtResource("11_8w85q")]
+transform = Transform3D(-4.37114e-08, 0, -1.10117, 0, 1, 0, 1, 0, -4.81338e-08, -9.59778, 1.09857, 10.3639)
+door_id = "white"
+lock_color = Color(1, 1, 1, 1)
+
+[node name="key" parent="." instance=ExtResource("12_y0gko")]
+transform = Transform3D(2.36641e-09, 0.0541371, -0.0840784, 0.1, -4.37114e-09, 0, -3.67518e-09, -0.0840784, -0.0541371, -6.99268, 1.07007, 2.79287)
+key_color = Color(1, 1, 1, 1)
+
+[node name="key2" parent="." instance=ExtResource("12_y0gko")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.668741, 0)
+
+[node name="Locked Door2" parent="." instance=ExtResource("11_8w85q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01633, -0.608556)
+door_id = "red"
+lock_color = Color(1, 0, 0, 1)

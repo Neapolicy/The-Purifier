@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://rpbslfy4bww2"]
+[gd_scene load_steps=12 format=3 uid="uid://mnlbvogtjh3u"]
 
-[ext_resource type="Script" path="res://Rooms/Doors/door.gd" id="1_yr70b"]
-[ext_resource type="Material" uid="uid://by3j40ek4ahqa" path="res://Resources/door.tres" id="2_brqrj"]
+[ext_resource type="Script" path="res://Rooms/Doors/locked_door.gd" id="1_uvmjj"]
+[ext_resource type="Script" path="res://Rooms/Doors/door_id.gd" id="1_x322x"]
+[ext_resource type="Material" uid="uid://by3j40ek4ahqa" path="res://Resources/door.tres" id="2_tsmag"]
+[ext_resource type="PackedScene" uid="uid://iy8txe2bgxuf" path="res://Props/lock.glb" id="3_m72a6"]
+[ext_resource type="Script" path="res://Furniture (Reimported/lock.gd" id="5_s8sus"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rirb4"]
 
@@ -47,14 +50,15 @@ _data = {
 "RESET": SubResource("Animation_lg0wj")
 }
 
-[node name="Door" type="Node3D"]
+[node name="Locked Door" type="Node3D"]
+script = ExtResource("1_x322x")
 
 [node name="Hinge" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.505402, 0, 0)
+transform = Transform3D(-3.61999e-06, 0, 1, 0, 1, 0, -1, 0, -3.61999e-06, -0.505402, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Hinge" node_paths=PackedStringArray("anim_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.505402, 0, 0)
-script = ExtResource("1_yr70b")
+script = ExtResource("1_uvmjj")
 anim_player = NodePath("../../AnimationPlayer")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Hinge/StaticBody3D"]
@@ -68,8 +72,12 @@ shape = SubResource("BoxShape3D_fcjaq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1.91517, 0, 0, 0, 0.348275, 0, 0, 0)
-material_override = ExtResource("2_brqrj")
+material_override = ExtResource("2_tsmag")
 mesh = SubResource("BoxMesh_rirb4")
+
+[node name="lock" parent="Hinge" instance=ExtResource("3_m72a6")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.890543, 0.31556, -0.19663)
+script = ExtResource("5_s8sus")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
