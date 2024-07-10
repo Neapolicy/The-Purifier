@@ -6,7 +6,6 @@ extends Node3D
 var meshes : Array = []
 
 func _ready():
-	print("lololo")
 	for i in get_children():
 		if i is MeshInstance3D:
 			meshes.append(i)
@@ -17,4 +16,3 @@ func set_color():
 		var material = i.get_active_material(0).duplicate()
 		i.set_surface_override_material(0, material)
 		material.albedo_color = key_color
-		print(material.albedo_color)

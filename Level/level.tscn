@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bmcesleyq1dih"]
+[gd_scene load_steps=11 format=3 uid="uid://bmcesleyq1dih"]
 
 [ext_resource type="PackedScene" uid="uid://ci40lhhnkbd3v" path="res://Ghost/ghost.tscn" id="1_0vs7k"]
 [ext_resource type="PackedScene" uid="uid://b6oj4hgc6wmy" path="res://Player/Playa.tscn" id="3_p6veo"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c50a1tcc8dax4" path="res://Rooms/main_yard.tscn" id="4_uf6wy"]
 [ext_resource type="PackedScene" uid="uid://dbhupqi57agh1" path="res://Rooms/guards_room.tscn" id="5_0801d"]
 [ext_resource type="PackedScene" uid="uid://gt4bttrf3vb6" path="res://Rooms/Fence.tscn" id="6_ve3lr"]
+[ext_resource type="PackedScene" uid="uid://dke2ylymrvhw7" path="res://Furniture (Reimported/key.tscn" id="7_a3fjc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7ya11"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -51,3 +52,10 @@ transform = Transform3D(5.66266e-07, 0, 8.91836, 0, 2.86935, 0, -5.97733, 0, 3.1
 
 [node name="Fencing2" parent="Fences" instance=ExtResource("6_ve3lr")]
 transform = Transform3D(-1, 0, 5.22554e-07, 0, 2.86935, 0, -8.74228e-08, 0, -5.97732, -28.1934, 2.85048, 15.9976)
+
+[node name="Outside Keys" type="Node3D" parent="."]
+
+[node name="key" parent="Outside Keys" instance=ExtResource("7_a3fjc")]
+transform = Transform3D(-0.000960645, -0.183894, 0.0786253, 0.199985, -8.74163e-09, 0.0024434, -0.00224663, 0.0786311, 0.183881, -27.43, -0.0668356, 39.0474)
+key_id = "red"
+key_color = Color(1, 0, 0, 1)

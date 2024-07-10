@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dbhupqi57agh1"]
+[gd_scene load_steps=29 format=3 uid="uid://dbhupqi57agh1"]
 
 [ext_resource type="Texture2D" uid="uid://cyar3jkqtf8ap" path="res://Textures/Objects/lobby floor.jpg" id="1_aocaj"]
 [ext_resource type="PackedScene" uid="uid://rpbslfy4bww2" path="res://Rooms/Doors/door.tscn" id="2_brq2o"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bxdp8doikf8ki" path="res://Furniture (Reimported/monitor.tscn" id="6_jfsox"]
 [ext_resource type="PackedScene" uid="uid://d13gsnt7ipffg" path="res://Furniture (Reimported/desk.tscn" id="6_xwnmw"]
 [ext_resource type="PackedScene" uid="uid://cgoxpaeh8tdyi" path="res://Furniture (Reimported/office_chair.tscn" id="7_aaet2"]
+[ext_resource type="PackedScene" uid="uid://mnlbvogtjh3u" path="res://Rooms/Doors/locked_door.tscn" id="7_bstnb"]
 [ext_resource type="PackedScene" uid="uid://d4edb6wd62eke" path="res://Furniture (Reimported/octo_cabinet.tscn" id="8_fwvoa"]
+[ext_resource type="PackedScene" uid="uid://d2dlnix27bwai" path="res://Props/break_chair.glb" id="9_vyude"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3ku0"]
 cull_mode = 2
@@ -107,8 +109,10 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.11537, 5.49348, -0.0705223
 [node name="Doorway3" parent="." instance=ExtResource("4_0sg4p")]
 transform = Transform3D(0.999848, 0, 0.0116942, 0, 0.989853, 0, -0.0174524, 0, 0.669963, -2.13561, 3.91728, -6.4915)
 
-[node name="Door" parent="Doorway3" instance=ExtResource("2_brq2o")]
-transform = Transform3D(0.994562, 0, 0.0236843, 0, 0.956603, 0, -0.0173601, 0, 1.35688, 0.629911, -2.93994, 4.30651)
+[node name="Locked Door" parent="Doorway3" instance=ExtResource("7_bstnb")]
+transform = Transform3D(-0.992962, 0, -1.43424e-07, 0, 1, 0, 8.00937e-08, 0, -1.44136, -0.43285, -2.95971, 2.96452)
+door_id = "red"
+lock_color = Color(1, 0, 0, 1)
 
 [node name="Walls" type="Node3D" parent="."]
 
@@ -177,6 +181,9 @@ transform = Transform3D(-0.00407486, -0.00569171, 8.72831e-11, -0.000811802, 0.0
 
 [node name="Office Chair4" parent="Office Chairs" instance=ExtResource("7_aaet2")]
 transform = Transform3D(-0.00645304, 0, -0.00271261, 0, 0.007, 0, 0.00271261, 0, -0.00645304, -6.55565, 0.188717, 3.63637)
+
+[node name="break_chair" parent="Office Chairs" instance=ExtResource("9_vyude")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 9.80958, 0.958395, 18.2181)
 
 [node name="Cabinets" parent="." instance=ExtResource("8_fwvoa")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -14.2391, -0.105066, -1.63205)

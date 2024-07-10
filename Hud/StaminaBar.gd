@@ -18,7 +18,6 @@ func _process(delta):
 			current_stamina = max_stamina
 		update_stamina_bar()
 
-
 func consume_stamina(amount: float):
 	# Consume stamina
 	current_stamina -= amount
