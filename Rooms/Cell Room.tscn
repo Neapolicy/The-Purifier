@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cl3c5q2w1ipck"]
+
+[ext_resource type="PackedScene" uid="uid://d222kyewnhwh7" path="res://Rooms/jail rooms/scene.gltf" id="1_e0h3o"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_e0h3o")]

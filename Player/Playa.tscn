@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6oj4hgc6wmy"]
+[gd_scene load_steps=10 format=3 uid="uid://b6oj4hgc6wmy"]
 
 [ext_resource type="PackedScene" uid="uid://bu4jw44t5hin" path="res://Textures/Player/raise-a-floppa-cube/source/model.gltf" id="1_aaa5a"]
 [ext_resource type="Script" path="res://Player/Player.gd" id="2_pqdh1"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://Player/States/CharacterStateMachine.gd" id="4_rmjo1"]
 [ext_resource type="Script" path="res://Player/States/Walk.gd" id="5_tvhpf"]
 [ext_resource type="Script" path="res://Player/States/Jump.gd" id="6_ixpql"]
-[ext_resource type="Script" path="res://Player/States/Fall.gd" id="7_37rnh"]
 [ext_resource type="Script" path="res://Player/Crouch.gd" id="8_smcox"]
 [ext_resource type="Script" path="res://Player/Sprint.gd" id="9_bnj3r"]
 
@@ -40,6 +39,7 @@ cull_mask = 1048573
 
 [node name="RayCast3D" type="RayCast3D" parent="Neck/Camera3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, -0.00575961, -0.999983, 0, 0.999983, -0.00575961, 0, 0, 0)
+target_position = Vector3(0, -1.5, 0)
 collision_mask = 5
 hit_from_inside = true
 script = ExtResource("3_myjvn")
@@ -47,30 +47,26 @@ script = ExtResource("3_myjvn")
 [node name="CharacterStateMachine" type="Node" parent="." index="3" node_paths=PackedStringArray("character", "currentState")]
 script = ExtResource("4_rmjo1")
 character = NodePath("..")
-currentState = NodePath("Walk")
+currentState = NodePath("Ground")
 
-[node name="Walk" type="Node" parent="CharacterStateMachine" index="0" node_paths=PackedStringArray("jump", "crouch", "sprint")]
+[node name="Ground" type="Node" parent="CharacterStateMachine" index="0" node_paths=PackedStringArray("jump", "crouch", "sprint")]
 script = ExtResource("5_tvhpf")
-jump = NodePath("../Jump")
+jump = NodePath("../Air")
 crouch = NodePath("../Crouch")
 sprint = NodePath("../Sprint")
 
-[node name="Jump" type="Node" parent="CharacterStateMachine" index="1" node_paths=PackedStringArray("sprint", "walk")]
+[node name="Air" type="Node" parent="CharacterStateMachine" index="1" node_paths=PackedStringArray("sprint", "walk")]
 script = ExtResource("6_ixpql")
 sprint = NodePath("../Sprint")
-walk = NodePath("../Walk")
+walk = NodePath("../Ground")
 
-[node name="Fall" type="Node" parent="CharacterStateMachine" index="2" node_paths=PackedStringArray("jump", "walk")]
-script = ExtResource("7_37rnh")
-jump = NodePath("../Jump")
-walk = NodePath("../Walk")
-
-[node name="Crouch" type="Node" parent="CharacterStateMachine" index="3" node_paths=PackedStringArray("jump", "walk")]
+[node name="Crouch" type="Node" parent="CharacterStateMachine" index="2" node_paths=PackedStringArray("jump", "walk", "char_hurt_box")]
 script = ExtResource("8_smcox")
-jump = NodePath("../Jump")
-walk = NodePath("../Walk")
+jump = NodePath("../Air")
+walk = NodePath("../Ground")
+char_hurt_box = NodePath("../../CollisionShape3D")
 
-[node name="Sprint" type="Node" parent="CharacterStateMachine" index="4" node_paths=PackedStringArray("jump", "walk")]
+[node name="Sprint" type="Node" parent="CharacterStateMachine" index="3" node_paths=PackedStringArray("jump", "walk")]
 script = ExtResource("9_bnj3r")
-jump = NodePath("../Jump")
-walk = NodePath("../Walk")
+jump = NodePath("../Air")
+walk = NodePath("../Ground")

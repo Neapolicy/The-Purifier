@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Rooms/Doors/door_id.gd" id="1_x322x"]
 [ext_resource type="Material" uid="uid://by3j40ek4ahqa" path="res://Resources/door.tres" id="2_tsmag"]
 [ext_resource type="PackedScene" uid="uid://iy8txe2bgxuf" path="res://Props/lock.glb" id="3_m72a6"]
-[ext_resource type="Script" path="res://Furniture (Reimported/lock.gd" id="5_s8sus"]
+[ext_resource type="Script" path="res://Furniture (Reimported)/lock.gd" id="5_s8sus"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rirb4"]
 

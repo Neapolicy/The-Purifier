@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://qoq58y2veqbj"]
+
+[ext_resource type="PackedScene" uid="uid://0juyigsvi1oc" path="res://Props/chair.glb" id="1_aovta"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_222aq"]
+cull_mode = 2
+albedo_color = Color(0.956863, 0.290196, 0.290196, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_57qcv"]
+size = Vector3(1.01318, 0.838989, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pf7w5"]
+
+[node name="chair" instance=ExtResource("1_aovta")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_222aq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.00479, 0.0065918, -0.604886, 0)
+shape = SubResource("BoxShape3D_57qcv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Cube/StaticBody3D" index="1"]
+transform = Transform3D(0.132818, 0, 0, 0, 0.65564, 0, 0, 0, 1.98842, 0.457237, 0, 0)
+shape = SubResource("BoxShape3D_pf7w5")

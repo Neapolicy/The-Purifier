@@ -1,10 +1,13 @@
 extends RayCast3D
 
 var held_key
+var ray_cast_y
 
 @onready var player = $"../../.."
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	ray_cast_y = abs(rad_to_deg(player.camera.rotation.x)) / 100 
+	target_position = Vector3(0, -1 - ray_cast_y, 0)
 	if (is_colliding() && get_collider() != null):
 		var hitObj = get_collider()
 		if (Input.is_action_just_pressed("interact")):

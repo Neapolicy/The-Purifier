@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4edb6wd62eke"]
+
+[ext_resource type="PackedScene" uid="uid://brx3v2bnyctfb" path="res://Furniture (Reimported)/filing_cabinet.tscn" id="1_p6lpy"]
+
+[node name="Cabinets" type="Node3D"]
+
+[node name="Cabinet" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.88938, 0.711916, 2.26043)
+
+[node name="Cabinet2" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.21145, 0.711916, 2.26043)
+
+[node name="Cabinet3" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.51583, 0.711916, 2.26043)
+
+[node name="Cabinet4" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.58843, 0.711916, 2.26043)
+
+[node name="Cabinet5" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.88938, 1.80809, 2.26043)
+
+[node name="Cabinet6" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.58843, 1.80641, 2.26043)
+
+[node name="Cabinet7" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.21145, 1.80221, 2.26043)
+
+[node name="Cabinet8" parent="." instance=ExtResource("1_p6lpy")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.51583, 1.80253, 2.26043)

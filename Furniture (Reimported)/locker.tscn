@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh26x5cllxpxp"]
+
+[ext_resource type="PackedScene" uid="uid://cwowlr2ypo6un" path="res://Props/locker_dirty/scene.gltf" id="1_50ga2"]
+
+[node name="Locker" instance=ExtResource("1_50ga2")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="SM_Locker_Door" parent="Sketchfab_model/SM_Locker_1_JFG_fbx/Object_2/RootNode" index="1"]
+transform = Transform3D(99.9998, -0.175147, -7.65592e-09, 0, -4.37114e-06, 100, -0.175147, -99.9998, -4.37113e-06, -22.2428, 0, -25.4656)

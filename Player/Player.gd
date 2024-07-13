@@ -5,6 +5,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 4.9
 const SPRINT_VELOCITY = 7.5
 const SENSITIVITY = .01
+const CROUCH_VELOCITY = 2.5
 
 #bob variables
 const BOB_FREQ = 2.0
@@ -34,7 +35,7 @@ func _unhandled_input(event):
 		if (event is InputEventMouseMotion):
 			neck.rotate_y(-event.relative.x * SENSITIVITY)
 			camera.rotate_x(-event.relative.y * SENSITIVITY)
-			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90)) #also increase raycast size if player looks down/up
 	
 func _physics_process(delta):
 	# Add the gravity.
