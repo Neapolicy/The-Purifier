@@ -17,6 +17,8 @@ size = Vector3(1.01318, 0.838989, 1)
 surface_material_override/0 = SubResource("StandardMaterial3D_222aq")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+collision_layer = 16
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.00479, 0.0065918, -0.604886, 0)

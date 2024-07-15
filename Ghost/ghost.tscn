@@ -10,9 +10,11 @@ albedo_texture = ExtResource("2_y487t")
 [sub_resource type="PlaneMesh" id="PlaneMesh_ymvjv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ii0ey"]
-size = Vector3(21, 5, 21)
+size = Vector3(21, 6, 32.823)
 
 [node name="Ghost" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 34
 script = ExtResource("1_7ixcb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -22,5 +24,14 @@ material_override = SubResource("StandardMaterial3D_bvvae")
 mesh = SubResource("PlaneMesh_ymvjv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, -4.37114e-09, -0.1, 0, 0.1, -4.37114e-09, 0, 0, 0)
+transform = Transform3D(0.1, 0, 0, 0, -2.57678e-09, -0.1, 0, 0.0589498, -4.37114e-09, 0, -0.591136, -2.58394e-08)
 shape = SubResource("BoxShape3D_ii0ey")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

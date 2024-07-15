@@ -17,6 +17,8 @@ albedo_color = Color(0.513726, 0.329412, 0.203922, 1)
 surface_material_override/0 = SubResource("StandardMaterial3D_aic5h")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+collision_layer = 16
+collision_mask = 23
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
 transform = Transform3D(1.81834, 0, 0, 0, 1.78553, 0, 0, 0, 1.99477, 0, -0.0368776, 0)

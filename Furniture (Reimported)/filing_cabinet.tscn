@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brx3v2bnyctfb"]
 
-[ext_resource type="PackedScene" uid="uid://cqee0pmq8u0o4" path="res://Props/rusty_filing_cabinet.glb" id="1_fxdpl"]
+[ext_resource type="PackedScene" uid="uid://cqee0pmq8u0o4" path="res://Props/Rusty cabinet/rusty_filing_cabinet.glb" id="1_fxdpl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_isg5g"]
 size = Vector3(20, 50, 20)
@@ -10,7 +10,24 @@ size = Vector3(20, 50, 20)
 [node name="Sketchfab_model" parent="." index="0"]
 transform = Transform3D(0.004, 0, 0, 0, -1.74846e-10, 0.004, 0, -0.004, -1.74846e-10, 0, 0, 0)
 
+[node name="drawer_04_low_mat_drawers_0" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_04_low" index="0"]
+layers = 16
+
+[node name="drawer_03_low_mat_drawers_0" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_03_low" index="0"]
+layers = 16
+
+[node name="drawer_02_low_mat_drawers_0" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_02_low" index="0"]
+layers = 16
+
+[node name="cabinet_low_mat_cabinet_0" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/cabinet_low" index="0"]
+layers = 16
+
+[node name="drawer_01_low_mat_drawers_0" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_01_low" index="0"]
+layers = 16
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_01_low/drawer_01_low_mat_drawers_0" index="0"]
+collision_layer = 16
+collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/ec62ffafd1a7462e9ed5e4e651973fb8_fbx/RootNode/filing_cabinet_low/drawer_01_low/drawer_01_low_mat_drawers_0/StaticBody3D" index="0"]
 transform = Transform3D(1.91353, 0, 0, 0, 2.78626, 2.84217e-14, 0, -1.7053e-13, 3.31856, 0, 0, 0)

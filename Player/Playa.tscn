@@ -12,8 +12,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_a1a8d"]
 size = Vector3(1.1, 6.37787, 1.1)
 
-[node name="Player" instance=ExtResource("1_aaa5a")]
+[node name="Player" groups=["player"] instance=ExtResource("1_aaa5a")]
 collision_layer = 2
+collision_mask = 49
 script = ExtResource("2_pqdh1")
 
 [node name="bone" parent="Node" index="0"]

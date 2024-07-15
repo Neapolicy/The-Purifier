@@ -91,6 +91,7 @@ mesh = SubResource("BoxMesh_wcryc")
 surface_material_override/0 = SubResource("StandardMaterial3D_8xs5d")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Roof"]
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Roof/StaticBody3D"]
 transform = Transform3D(19.9545, 0, 1.13687e-13, 0, 0.351962, 0, -1.42109e-14, 0, 4.79575, 0, 0, 0)
