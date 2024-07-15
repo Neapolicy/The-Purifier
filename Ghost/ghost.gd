@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 10.0
 const ACCEL = 2.0
 
 @onready var target = get_tree().get_first_node_in_group("player")
@@ -17,7 +17,7 @@ func _physics_process(delta):
 	direction = (navi.get_next_path_position() - global_position).normalized()
 
 	velocity = velocity.lerp(direction * SPEED, ACCEL * delta)
-	print(direction, velocity)
+	print(velocity)
 	move_and_slide()
 
 

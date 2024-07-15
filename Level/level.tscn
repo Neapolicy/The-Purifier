@@ -29,7 +29,7 @@ polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Arr
 [node name="Level" type="Node3D"]
 
 [node name="Ghost" parent="." instance=ExtResource("1_0vs7k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83889, 3.32195, -0.0832348)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325561, 2.41127, -5.28756)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w8m4q")

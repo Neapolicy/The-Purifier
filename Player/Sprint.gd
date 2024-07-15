@@ -6,6 +6,7 @@ extends State
 var stamina_bar = Hud.get_child(0)
 
 func on_enter():
+	print("current state: sprint")
 	character.current_speed = character.SPRINT_VELOCITY
 	
 func state_input(event : InputEvent):
@@ -13,7 +14,6 @@ func state_input(event : InputEvent):
 	_check_sprinting(get_physics_process_delta_time(), character.direction)
 	if event.is_action_released("sprint") || character.exhausted:
 		nextState = walk
-		print("current state " + nextState.name)
 
 func _check_sprinting(time : float, direction : Vector3):
 	if (!character.exhausted && !character.velocity.is_zero_approx()):
