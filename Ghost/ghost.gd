@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 10.0
+const SPEED = 5.0
 const ACCEL = 2.0
 
 @onready var target = get_tree().get_first_node_in_group("player")
@@ -17,9 +17,16 @@ func _physics_process(delta):
 	direction = (navi.get_next_path_position() - global_position).normalized()
 
 	velocity = velocity.lerp(direction * SPEED, ACCEL * delta)
-	print(velocity)
+
 	move_and_slide()
 
 
 func _on_timer_timeout():
 	navi.target_position = target.global_position
+
+
+func _on_area_3d_area_entered(area):
+	if (area.is_in_group("player")):
+		print("rah rah oo lala")
+	else:
+		print("actually nvm")

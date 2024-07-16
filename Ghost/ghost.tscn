@@ -10,7 +10,7 @@ albedo_texture = ExtResource("2_y487t")
 [sub_resource type="PlaneMesh" id="PlaneMesh_ymvjv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ii0ey"]
-size = Vector3(21, 6, 21.1996)
+size = Vector3(15, 1, 1)
 
 [node name="Ghost" type="CharacterBody3D"]
 collision_layer = 8
@@ -24,7 +24,7 @@ material_override = SubResource("StandardMaterial3D_bvvae")
 mesh = SubResource("PlaneMesh_ymvjv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.1, 0, 0, 0, -2.57678e-09, -0.1, 0, 0.0589498, -4.37114e-09, 0, -0.00996536, -4.35605e-10)
+transform = Transform3D(0.132692, 0, 0, 0, -4.89438e-09, -2.02207, 0, 0.11197, -8.83877e-08, 0, -0.00996536, -4.35605e-10)
 shape = SubResource("BoxShape3D_ii0ey")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -34,4 +34,11 @@ debug_enabled = true
 wait_time = 0.1
 autostart = true
 
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.132692, 0, 0, 0, -4.89438e-09, -2.02207, 0, 0.11197, -8.83877e-08, 0, -0.00996536, -4.35605e-10)
+shape = SubResource("BoxShape3D_ii0ey")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

@@ -71,3 +71,9 @@ char_hurt_box = NodePath("../../CollisionShape3D")
 script = ExtResource("9_bnj3r")
 jump = NodePath("../Air")
 walk = NodePath("../Ground")
+
+[node name="Area3D" type="Area3D" parent="." index="4" groups=["player"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(0.465945, 0, 0, 0, 0.255473, 0, 0, 0, 0.439348, -0.13306, -0.116175, 0.1875)
+shape = SubResource("BoxShape3D_a1a8d")
