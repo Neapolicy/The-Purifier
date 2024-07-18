@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6im2fqy3dkfh"]
+
+[ext_resource type="Texture2D" uid="uid://bc5hwia2pedfj" path="res://Textures/Objects/fence.png" id="1_5aff0"]
+[ext_resource type="PackedScene" uid="uid://dx4roirxj1b0w" path="res://Furniture (Reimported)/lock.tscn" id="2_nm4f2"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_37web"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7s18c"]
+transparency = 1
+albedo_texture = ExtResource("1_5aff0")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ydtjm"]
+
+[node name="Fencing" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_37web")
+surface_material_override/0 = SubResource("StandardMaterial3D_7s18c")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1.97278, 2.22045e-16, 0, 0, 0.0471161, 0, 0, 0, 1.95854, 0, 0, 0)
+shape = SubResource("BoxShape3D_ydtjm")
+
+[node name="lock" parent="." instance=ExtResource("2_nm4f2")]

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 3.0
 const ACCEL = 2.0
 
 @onready var target = get_tree().get_first_node_in_group("player")

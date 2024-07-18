@@ -1,6 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmcesleyq1dih"]
+[gd_scene load_steps=15 format=3 uid="uid://bmcesleyq1dih"]
 
 [ext_resource type="PackedScene" uid="uid://ci40lhhnkbd3v" path="res://Ghost/ghost.tscn" id="1_0vs7k"]
+[ext_resource type="Script" path="res://Level/level.gd" id="1_efpij"]
+[ext_resource type="PackedScene" uid="uid://cwxi7nws1l8n7" path="res://Menus/pause_menu.tscn" id="2_mfj7l"]
 [ext_resource type="PackedScene" uid="uid://b6oj4hgc6wmy" path="res://Player/Playa.tscn" id="3_p6veo"]
 [ext_resource type="PackedScene" uid="uid://c8hvvwlws0lva" path="res://Rooms/lobby.tscn" id="4_reocy"]
 [ext_resource type="PackedScene" uid="uid://c50a1tcc8dax4" path="res://Rooms/main_yard.tscn" id="4_uf6wy"]
@@ -27,9 +29,15 @@ vertices = PackedVector3Array(-49.4562, 0.396871, -8.8611, -49.4562, 0.396871, 9
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_efpij")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("2_mfj7l")]
+visible = false
 
 [node name="Ghost" parent="." instance=ExtResource("1_0vs7k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325561, 2.41127, -5.28756)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325561, 1.7693, -5.28756)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w8m4q")
@@ -39,7 +47,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("3_p6veo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567832, 1.16736, -0.59919)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567832, 1.16878, -0.59919)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_f2q3k")

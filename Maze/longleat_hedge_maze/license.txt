@@ -1,0 +1,11 @@
+Model Information:
+* title:	Longleat Hedge Maze
+* source:	https://sketchfab.com/3d-models/longleat-hedge-maze-a1de468725ae4edfa8c861c7aa0735f7
+* author:	Marius Dobre (https://sketchfab.com/Marius.Dobre)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Longleat Hedge Maze" (https://sketchfab.com/3d-models/longleat-hedge-maze-a1de468725ae4edfa8c861c7aa0735f7) by Marius Dobre (https://sketchfab.com/Marius.Dobre) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

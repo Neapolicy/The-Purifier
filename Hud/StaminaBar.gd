@@ -28,3 +28,7 @@ func consume_stamina(amount: float):
 func update_stamina_bar():
 	# Update the progress bar value
 	value = current_stamina
+
+func reset_values():
+	current_stamina = 100
+	update_stamina_bar()
